@@ -1,0 +1,12 @@
+---
+- name: James' Ansible Automation Fortinet playbook
+  hosts: fortigate-devices
+  collections:
+    - fortinet.fortios
+  roles:
+    - role: ansbile.automation.run
+  tasks:
+    - name: Set hostname to james-fortinet
+      fortinet.fortios.fortios_system_global:
+        vdom: "root"
+        hostname: "james-fortinet"
